@@ -1,22 +1,5 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mougni-Nawel/portfolio.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Mougni-Nawel/portfolio/issues"
-  },
-  "homepage": "https://github.com/Mougni-Nawel/portfolio#readme",
-  "devDependencies": {
-    "three": "^0.159.0"
+  "dependencies": {
+    "treejs": "^0.6.2"
   }
 }
