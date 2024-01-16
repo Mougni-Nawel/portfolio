@@ -11,7 +11,7 @@ const Header = () => {
       <nav className={styles.nav}>
         <Link href="/">Home</Link>
         <Link href="/contact">Contact</Link>
-        <button className={styles.button}>Click me</button>
+        {/* <button className={styles.button}>Click me</button> */}
       </nav>
     </header>
   );

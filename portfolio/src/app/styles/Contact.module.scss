@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.contactForm {
+    background-color: #1f2326;
+    color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 45rem;
+    margin: auto;
+    margin-top: 5%;
+
+    h2 {
+      color: #c6b9a7;
+    }
+
+    label , h2 {
+        font-family: 'Playfair Display', serif;
+        color: #c6b9a7;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        font-size: 1.2rem;
+        font-weight: 100;
+  
+       
+      }
+
+    h2{
+        font-size: 1.9rem;
+        font-weight: 50;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      input,
+      textarea {
+        padding: 10px;
+        border: 1px solid #c6b9a7;
+        border-radius: 1px;
+        background-color: #1f2326;
+        color: whitesmoke;
+      }
+  
+      button {
+        padding: 10px;
+        background-color: #c6b9a7;
+        color: #1f2326;
+        border: none;
+        border-radius: 1px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+  
+        &:hover {
+          background-color: whitesmoke;
+          color: #1f2326;
+        }
+      }
+    }
+  }
+  
