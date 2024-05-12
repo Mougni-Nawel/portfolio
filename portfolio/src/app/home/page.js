@@ -22,7 +22,6 @@ function Model() {
 function Home() {
   const controls = useRef();
   const camera = useRef();
-  const { scene } = useGLTF('/room.glb');
   const [cameraPosition, setCameraPosition] = useState({ x: 0, y: 0, z: 0 });
   const [loading, setLoading] = useState(true);
   const [modalVisible, setModalVisible] = useState(false); // State to control modal visibility
@@ -43,7 +42,7 @@ function Home() {
     checkCamera(); // Start checking for camera availability
   
     return () => clearTimeout(); // Cleanup function to clear the timeout
-  }, [camera.current, cameraPosition, scene]); // Update when camera.current, cameraPosition, or scene changes
+  }, [camera.current, cameraPosition]); // Update when camera.current, cameraPosition, or scene changes
 
   const handleWallObjectClick = () => {
     // Define the behavior when a WallObject is clicked
