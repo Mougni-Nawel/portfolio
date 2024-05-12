@@ -1,0 +1,14 @@
+// Home.module.scss
+
+.home-container {
+    position: relative;
+    height: 80vh; /* Adjust as needed */
+  }
+  
+  .canvas-container {
+    position: absolute;
+    inset: 5vh 0; /* Adjust top offset as needed */
+    height: 80vh; /* Adjust height as needed */
+    width: 90%;
+  }
+  
