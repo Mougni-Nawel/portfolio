@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title": "Project 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stack": ["React", "Node.js", "MongoDB"],
+      "image": "ireland.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Project 2",
+      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "stack": ["Vue.js", "Firebase"],
+      "image": "logo.png"
+    },
+    {
+      "id": 3,
+      "title": "Project 3",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "stack": ["Angular", "Express", "MySQL"],
+      "image": "project3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Project 4",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "stack": ["Svelte", "Django", "PostgreSQL"],
+      "image": "project4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Project 5",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "stack": ["React Native", "Firebase"],
+      "image": "project5.jpg"
+    }
+  ]
+  

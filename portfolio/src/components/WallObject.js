@@ -1,10 +1,9 @@
-// WallObject.js
 import React, { useRef } from 'react';
 import * as THREE from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { useFrame } from '@react-three/fiber';
 
-function WallObject({ position, rotation, onClick }) {
+function WallObject({ position, rotation, onClick, imageUrl }) {
   const meshRef = useRef();
 
   const handleClick = () => {
@@ -15,7 +14,7 @@ function WallObject({ position, rotation, onClick }) {
     const loader = new OBJLoader();
     loader.load('/PM.obj', (obj) => {
       const textureLoader = new THREE.TextureLoader();
-      textureLoader.load('/ireland.jpg', (texture) => {
+      textureLoader.load(imageUrl, (texture) => {
         const material = new THREE.MeshBasicMaterial({ map: texture });
         obj.traverse((child) => {
           if (child instanceof THREE.Mesh) {
@@ -25,7 +24,9 @@ function WallObject({ position, rotation, onClick }) {
         obj.scale.set(2, 2, 2);
         obj.position.set(position.x, position.y, position.z);
         obj.rotation.set(rotation.x, rotation.y, rotation.z);
-        meshRef.current.add(obj);
+        if(meshRef.current !== null){
+          meshRef.current.add(obj);
+        }
       });
     });
   });

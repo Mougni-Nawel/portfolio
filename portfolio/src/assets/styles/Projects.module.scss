@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.infoContainer {
+  background-color: #1f2326;
+  color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 80rem; // Adjust as needed
+  display: flex;
+}
+
+.presentation {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-top: 10px;
+  flex-grow: 1; // Take up remaining space
+}
+
+.imageContainer img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.presentation h3 {
+  color: #c6b9a7;
+  font-size: 1.5rem;
+  margin-top: 10px; /* Add margin for spacing */
+  text-align: center; /* Center text horizontally */
+}
+
+.presentation p {
+  color: whitesmoke;
+}
+
+.presentation .hrColor {
+  border: none;
+  height: 2px;
+  background-color: #c6b9a7;
+  width: 100%; /* Ensures the line spans the entire width */
+  margin: 10px 0; /* Add some vertical margin for spacing */
+}
+
+
+.presentation .languageContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.presentation .languageCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #c6b9a7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1f2326;
+}
