@@ -2,13 +2,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
-import * as THREE from 'three';
 import WallObject from '../../components/WallObject';
-import PlayerControls from '../../components/PlayerControls';
 import LoadingScreen from '../../components/LoadingScreen';
-import Modal from '../../components/Modal'; // Import the Modal component
-import styles from '@/app/styles/Home.module.scss';
-import { useRouter } from 'next/router';
+import styles from '../../assets/styles/Home.module.scss'
 
 function BackgroundImage() {
   return null;
@@ -24,7 +20,6 @@ function Home() {
   const camera = useRef();
   const [cameraPosition, setCameraPosition] = useState({ x: 0, y: 0, z: 0 });
   const [loading, setLoading] = useState(true);
-  const [modalVisible, setModalVisible] = useState(false); // State to control modal visibility
 
   useEffect(() => {
     const checkCamera = () => {
@@ -44,11 +39,10 @@ function Home() {
     return () => clearTimeout(); // Cleanup function to clear the timeout
   }, [camera.current, cameraPosition]); // Update when camera.current, cameraPosition, or scene changes
 
-  const handleWallObjectClick = () => {
+  const handleWallObjectClick = (projectId) => {
     // Define the behavior when a WallObject is clicked
     console.log('WallObject clicked!');
-    setModalVisible(true); // Show the modal when a WallObject is clicked
-    window.location.href = '/contact';
+    window.location.href = `/projects?id=${projectId}`;
   };
 
   return (
@@ -61,12 +55,12 @@ function Home() {
           <Model />
           {!loading && (
             <>
-              <WallObject position={{ x: -7.5, y: 1.8, z: -0.5 }} rotation={{ x: 0, y: 0, z: 0 }} onClick={handleWallObjectClick}  camera={camera.current}/>
-              <WallObject position={{ x: 11.25, y: 1.8, z: -0.5 }} rotation={{ x: 0, y: 0, z: 0 }} onClick={handleWallObjectClick}  camera={camera.current}/>
-              <WallObject position={{ x: 7.5, y: 1.8, z: 2 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={handleWallObjectClick}  camera={camera.current}/>
-              <WallObject position={{ x: 7.5, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={handleWallObjectClick}  camera={camera.current}/>
-              <WallObject position={{ x: 1.3, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={handleWallObjectClick}  camera={camera.current}/>
-              <WallObject position={{ x: -2.5, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={handleWallObjectClick}  camera={camera.current}/>
+              <WallObject position={{ x: -7.5, y: 1.8, z: -0.5 }} rotation={{ x: 0, y: 0, z: 0 }} onClick={() => handleWallObjectClick(1)}  imageUrl="/ireland.jpg"/>
+              <WallObject position={{ x: 11.25, y: 1.8, z: -0.5 }} rotation={{ x: 0, y: 0, z: 0 }} onClick={() => handleWallObjectClick(2)} imageUrl="/logo.png" />
+              <WallObject position={{ x: 7.5, y: 1.8, z: 2 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(3)}  imageUrl="/ireland.jpg"/>
+              <WallObject position={{ x: 7.5, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(4)}  imageUrl="/ireland.jpg"/>
+              <WallObject position={{ x: 1.3, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(5)}  imageUrl="/ireland.jpg"/>
+              <WallObject position={{ x: -2.5, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(6)}  imageUrl="/ireland.jpg"/>
             </>
           )}
           <OrbitControls
@@ -77,10 +71,8 @@ function Home() {
             maxDistance={10}
           />
           <perspectiveCamera ref={camera} />
-          <PlayerControls />
         </Canvas>
       </div>
-      {modalVisible && <Modal onClose={() => setModalVisible(false)}></Modal>} {/* Display modal with LOL */}
     </>
   );
 }

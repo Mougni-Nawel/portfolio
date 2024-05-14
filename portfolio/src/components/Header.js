@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '@/app/styles/Header.module.scss';
+import styles from '../assets/styles/Header.module.scss';
 
 const Header = () => {
   return (
@@ -11,7 +11,6 @@ const Header = () => {
       <nav className={styles.nav}>
         <Link href="/home">Home</Link>
         <Link href="/contact">Contact</Link>
-        {/* <button className={styles.button}>Click me</button> */}
       </nav>
     </header>
   );
