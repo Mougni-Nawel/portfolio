@@ -2,7 +2,13 @@
 import React from 'react';
 import styles from '../assets/styles/Projects.module.scss';
 
-const Project = ({ title, description, stack, image }) => {
+const Project = ({ title, description, stack, image, github }) => {
+
+  const openGithub = () => {
+    window.open(github, '_blank');
+  };
+
+
   return (
     <div className={styles.contactContainer}>
       <div className={styles.infoContainer}>
@@ -12,12 +18,14 @@ const Project = ({ title, description, stack, image }) => {
           <hr className={styles.hrColor} />
           <div className={styles.languageContainer}>
             {stack.map((tech, index) => (
-              <i key={index} className={`fab ${tech} ${styles.languageCircle}`}></i>
+              <div key={index} className={styles.stackItem}>
+                <i className={`fab ${tech} ${styles.languageCircle}`} style={{ color: 'black' }}><span>{tech}</span></i>
+              </div>
             ))}
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <img src={image} alt="Project Image" />
+          <img src={image} alt="Project Image" onClick={openGithub}/>
         </div>
       </div>
     </div>

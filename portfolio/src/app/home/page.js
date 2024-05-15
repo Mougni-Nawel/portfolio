@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef, useEffect, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, useGLTF } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber'; // used to manage the scene
+import { OrbitControls, useGLTF } from '@react-three/drei'; // used for camera control and loading 3D models
 import WallObject from '../../components/WallObject';
 import LoadingScreen from '../../components/LoadingScreen';
 import styles from '../../assets/styles/Home.module.scss'
@@ -28,38 +28,41 @@ function Home() {
         camera.current.lookAt(0, 0, 0);
         controls.current.target.set(cameraPosition.x, cameraPosition.y, cameraPosition.z);
         controls.current.update();
-        setLoading(false); // Set loading to false when the camera is available
+        setLoading(false);
       } else {
-        setTimeout(checkCamera, 100); // Check again after 100 milliseconds
+        // check every 100 ms
+        setTimeout(checkCamera, 100);
       }
     };
   
-    checkCamera(); // Start checking for camera availability
+    checkCamera();
   
-    return () => clearTimeout(); // Cleanup function to clear the timeout
-  }, [camera.current, cameraPosition]); // Update when camera.current, cameraPosition, or scene changes
+    return () => clearTimeout();
+  }, [camera.current, cameraPosition]);
 
   const handleWallObjectClick = (projectId) => {
-    // Define the behavior when a WallObject is clicked
     console.log('WallObject clicked!');
     window.location.href = `/projects?id=${projectId}`;
   };
 
   return (
     <>
-      {loading && <LoadingScreen />} {/* Display loading screen here */}
+     {/* loading screen displaying here */}
+      {loading && <LoadingScreen />}
       <div className={styles['home-container']}>
         <Canvas className={styles['canvas-container']}>
           <ambientLight intensity={0.5} />
           <BackgroundImage />
-          <Model />
+          {/* Model 3D here */}
+          <Model /> 
           {!loading && (
             <>
-              <WallObject position={{ x: -7.5, y: 1.8, z: -0.5 }} rotation={{ x: 0, y: 0, z: 0 }} onClick={() => handleWallObjectClick(1)}  imageUrl="/ireland.jpg"/>
-              <WallObject position={{ x: 11.25, y: 1.8, z: -0.5 }} rotation={{ x: 0, y: 0, z: 0 }} onClick={() => handleWallObjectClick(2)} imageUrl="/logo.png" />
-              <WallObject position={{ x: 7.5, y: 1.8, z: 2 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(3)}  imageUrl="/ireland.jpg"/>
-              <WallObject position={{ x: 7.5, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(4)}  imageUrl="/ireland.jpg"/>
-              <WallObject position={{ x: 1.3, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(5)}  imageUrl="/ireland.jpg"/>
+            {/* WallObject components with different positions and click handlers */}
+              <WallObject position={{ x: -7.5, y: 1.8, z: -0.5 }} rotation={{ x: 0, y: 0, z: 0 }} onClick={() => handleWallObjectClick(1)}  imageUrl="/eshop.png"/>
+              <WallObject position={{ x: 11.25, y: 1.8, z: -0.5 }} rotation={{ x: 0, y: 0, z: 0 }} onClick={() => handleWallObjectClick(2)} imageUrl="/buddy.png" />
+              <WallObject position={{ x: 7.5, y: 1.8, z: 2 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(3)}  imageUrl="/api.jpg"/>
+              <WallObject position={{ x: 7.5, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(4)}  imageUrl="/api.jpg"/>
+              <WallObject position={{ x: 1.3, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(5)}  imageUrl="/api.jpg"/>
               <WallObject position={{ x: -2.5, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(6)}  imageUrl="/ireland.jpg"/>
             </>
           )}

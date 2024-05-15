@@ -1,38 +1,43 @@
 [
     {
       "id": 1,
-      "title": "Project 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "stack": ["React", "Node.js", "MongoDB"],
-      "image": "ireland.jpg"
+      "title": "MyStore",
+      "description": "Découvrez mon projet de site e-commerce développé avec Next.js et React en équipe. En tant que développeuse passionnée, j'ai conçu cette plateforme en mettant l'accent sur l'expérience utilisateur et la performance. Grâce à l'utilisation de Next.js, j'ai pu créer un site web à la fois dynamique et efficace. La combinaison de React pour la gestion de l'interface utilisateur et de Next.js pour le rendu côté serveur m'a permis d'offrir une navigation fluide et des temps de chargement réduits, garantissant ainsi une expérience utilisateur optimale",
+      "stack": ["React", "Node.js", "Next"],
+      "image": "eshop.png",
+      "github": "https://github.com/orgs/ynov-2024-m1-team-5/repositories"
     },
     {
       "id": 2,
-      "title": "Project 2",
-      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "stack": ["Vue.js", "Firebase"],
-      "image": "logo.png"
+      "title": "Pay Buddy",
+      "description": "Pay Buddy est bien plus qu'une simple application bancaire, c'est une plateforme complète qui offre une expérience bancaire moderne et sécurisée. Grâce à Pay Buddy, les utilisateurs peuvent gérer leurs finances en toute simplicité, effectuer des virements, consulter leur historique de transactions et bien plus encore. L'interface utilisateur intuitive et conviviale offre une expérience fluide, tandis que les mesures de sécurité avancées garantissent la confidentialité et la sécurité des données des utilisateurs.",
+      "stack": ["SpringBoot", "Thymeleaf"],
+      "image": "buddy.png",
+      "github": "https://github.com/Mougni-Nawel/buddy"
     },
     {
       "id": 3,
-      "title": "Project 3",
-      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "stack": ["Angular", "Express", "MySQL"],
-      "image": "project3.jpg"
+      "title": "Poseidon",
+      "description": "Avec Poseidon, les utilisateurs peuvent accéder à une gamme de fonctionnalités de trading, y compris la consultation des cours des actifs, la gestion de portefeuille et l'exécution d'ordres. Bien que l'application ne prenne pas en charge le trading en temps réel sur les marchés, elle fournit des données actualisées régulièrement pour permettre aux utilisateurs de prendre des décisions éclairées.",
+      "stack": ["SpringBoot", "Java"],
+      "image": "api.jpg",
+      "github": "https://github.com/Mougni-Nawel/poseidon/tree/main/Poseiden-skeleton"
     },
     {
       "id": 4,
-      "title": "Project 4",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "stack": ["Svelte", "Django", "PostgreSQL"],
-      "image": "project4.jpg"
+      "title": "Medilabo",
+      "description": "Le but est de développer une application sur le dépistage des risques de maladies de diabète de type 2. Le projet est developpé suivant l'architecture microservices",
+      "stack": ["SpringBoot", "MySql", "MongoDB"],
+      "image": "api.jpg",
+      "github": "https://github.com/Mougni-Nawel/medilaboProject"
     },
     {
       "id": 5,
-      "title": "Project 5",
-      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "stack": ["React Native", "Firebase"],
-      "image": "project5.jpg"
+      "title": "Poseidon",
+      "description": "Avec Poseidon, les utilisateurs peuvent accéder à une gamme de fonctionnalités de trading, y compris la consultation des cours des actifs, la gestion de portefeuille et l'exécution d'ordres. Bien que l'application ne prenne pas en charge le trading en temps réel sur les marchés, elle fournit des données actualisées régulièrement pour permettre aux utilisateurs de prendre des décisions éclairées.",
+      "stack": ["SpringBoot", "Java"],
+      "image": "api.jpg",
+      "github": "https://github.com/Mougni-Nawel/poseidon/tree/main/Poseiden-skeleton"
     }
   ]
   

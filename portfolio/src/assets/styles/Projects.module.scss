@@ -12,27 +12,30 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 80rem; // Adjust as needed
+  width: 80rem;
   display: flex;
+}
+
+.imageContainer {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 10px;
+  flex-grow: 1;
 }
 
 .presentation {
   width: 40%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-}
-
-.imageContainer {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: right;
-  padding-top: 10px;
-  flex-grow: 1; // Take up remaining space
 }
 
+// format image
 .imageContainer img {
+  width: 100%;
   max-width: 90%;
   height: auto;
   border-radius: 10px;
@@ -41,8 +44,8 @@
 .presentation h3 {
   color: #c6b9a7;
   font-size: 1.5rem;
-  margin-top: 10px; /* Add margin for spacing */
-  text-align: center; /* Center text horizontally */
+  margin-top: 10px;
+  text-align: center;
 }
 
 .presentation p {
@@ -53,8 +56,8 @@
   border: none;
   height: 2px;
   background-color: #c6b9a7;
-  width: 100%; /* Ensures the line spans the entire width */
-  margin: 10px 0; /* Add some vertical margin for spacing */
+  width: 100%;
+  margin: 10px 0;
 }
 
 
@@ -64,13 +67,22 @@
   margin-top: 10px;
 }
 
+// stack
 .presentation .languageCircle {
-  width: 40px;
-  height: 40px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   background-color: #c6b9a7;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #1f2326;
+  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+}
+
+// text stack
+.presentation .languageCircle span {
+  font-size: 14px;
+  font-weight: bold;
 }

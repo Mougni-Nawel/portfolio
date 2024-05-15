@@ -2,8 +2,8 @@
 import React,{ useState } from 'react';
 import styles from '../assets/styles/Contact.module.scss';
 import emailjs from "emailjs-com";
-import { toast } from 'react-toastify'; // Import toast from react-toastify
-import 'react-toastify/dist/ReactToastify.css'; // Import toast styles
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const sendMail = (name, email, message) => {
   return emailjs.send(
