@@ -58,11 +58,11 @@ function Home() {
           {!loading && (
             <>
             {/* WallObject components with different positions and click handlers */}
-              <WallObject position={{ x: -7.5, y: 1.8, z: -0.5 }} rotation={{ x: 0, y: 0, z: 0 }} onClick={() => handleWallObjectClick(1)}  imageUrl="/ireland.jpg"/>
-              <WallObject position={{ x: 11.25, y: 1.8, z: -0.5 }} rotation={{ x: 0, y: 0, z: 0 }} onClick={() => handleWallObjectClick(2)} imageUrl="/logo.png" />
-              <WallObject position={{ x: 7.5, y: 1.8, z: 2 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(3)}  imageUrl="/ireland.jpg"/>
-              <WallObject position={{ x: 7.5, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(4)}  imageUrl="/ireland.jpg"/>
-              <WallObject position={{ x: 1.3, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(5)}  imageUrl="/ireland.jpg"/>
+              <WallObject position={{ x: -7.5, y: 1.8, z: -0.5 }} rotation={{ x: 0, y: 0, z: 0 }} onClick={() => handleWallObjectClick(1)}  imageUrl="/eshop.png"/>
+              <WallObject position={{ x: 11.25, y: 1.8, z: -0.5 }} rotation={{ x: 0, y: 0, z: 0 }} onClick={() => handleWallObjectClick(2)} imageUrl="/buddy.png" />
+              <WallObject position={{ x: 7.5, y: 1.8, z: 2 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(3)}  imageUrl="/api.jpg"/>
+              <WallObject position={{ x: 7.5, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(4)}  imageUrl="/api.jpg"/>
+              <WallObject position={{ x: 1.3, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(5)}  imageUrl="/api.jpg"/>
               <WallObject position={{ x: -2.5, y: 1.8, z: -3.4 }} rotation={{ x: 0, y: (90 * Math.PI) / 180, z: 0 }} onClick={() => handleWallObjectClick(6)}  imageUrl="/ireland.jpg"/>
             </>
           )}
