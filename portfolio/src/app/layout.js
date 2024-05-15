@@ -1,7 +1,7 @@
 import './globals.css'
 import Header from '../components/Header'
-import { ToastContainer } from 'react-toastify'; // Import ToastContainer from react-toastify
-import 'react-toastify/dist/ReactToastify.css'; // Import toast styles
+import { ToastContainer } from 'react-toastify'; // Notification
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export const metadata = {
